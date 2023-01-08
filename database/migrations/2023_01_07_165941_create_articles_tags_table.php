@@ -13,8 +13,11 @@ return new class extends Migration
      */
     public function up()
     {
-        Schema::table('archives', function (Blueprint $table) {
-            $table->string('image',255)->nullable();
+        Schema::create('archive_tags', function (Blueprint $table)
+        {
+            $table->id();
+            $table->integer('archive_id')->unsigned();
+            $table->integer('tag_id')->unsigned();
         });
     }
 
@@ -25,8 +28,6 @@ return new class extends Migration
      */
     public function down()
     {
-        Schema::table('archives', function (Blueprint $table) {
-                $table->dropColumn('image');
-        });
+        Schema::dropIfExists('archive_tags');
     }
 };

@@ -18,7 +18,7 @@
     <label for="show-menu" class="close"><span class="fa fa-times"></label>
     <ul id="menu">
         <li><a class="active" href="#">Home</a></li>
-        <li><a href="#">Old School</a></li>
+        <li><a href="">Old School</a></li>
         <li><a href="#">Pastel</a></li>
         <li><a href="#">Archive</a></li>
         <li><a href="#">Empty</a></li>
