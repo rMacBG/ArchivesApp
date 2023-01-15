@@ -18,8 +18,8 @@
     <label for="show-menu" class="open"><span class="fa fa-bars"></span></label>
     <label for="show-menu" class="close"><span class="fa fa-times"></span></label>
     <ul id="menu">
-        <li><a class="active" href=app.blade.php>Home</a></li>
-        <li><a href={"resources/views/ArchivesList/archvies.blade.php"}>Archives</a></li>
+        <li><a class="active" href="/">Home</a></li>
+        <li><a href="archive">Archives</a></li>
         <li><a href="#">Pastel</a></li>
         <li><a href="#">Empty</a></li>
         <li><a href="#">Also Empty</a></li>
@@ -35,9 +35,7 @@
 </div>
 <!-- // -->
 @yield('content')
-@if(isset($ArchivesList))
 @yield('archives')
-@endif
 <!-- Footer Items -->
 <div id="footer">
     <p>&copy; Copyright Your Name</p>

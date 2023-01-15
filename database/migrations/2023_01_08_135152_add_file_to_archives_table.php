@@ -14,7 +14,7 @@ return new class extends Migration
     public function up()
     {
         Schema::table('archives', function (Blueprint $table) {
-            $table->string('image',255)->nullable();
+            $table->string('file',255)->nullable();
         });
     }
 
@@ -26,7 +26,7 @@ return new class extends Migration
     public function down()
     {
         Schema::table('archives', function (Blueprint $table) {
-                $table->dropColumn('image');
+                $table->dropColumn('file');
         });
     }
 };

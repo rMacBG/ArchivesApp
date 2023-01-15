@@ -2,6 +2,7 @@
 
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\IndexController;
+use App\Http\Controllers\ArchivesController;
 
 /*
 |--------------------------------------------------------------------------
@@ -16,3 +17,4 @@ use App\Http\Controllers\IndexController;
 
 
 Route::get('/', [IndexController::class, 'index']);
+Route::get('archive', [ArchivesController::class, 'archives']);

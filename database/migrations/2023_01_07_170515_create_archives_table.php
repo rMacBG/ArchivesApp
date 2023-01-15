@@ -16,7 +16,7 @@ return new class extends Migration
         Schema::create('archives', function (Blueprint $table){
             $table->id();
             $table->string('title');
-            $table->longText('content');
+            $table->longText('description');
             $table->timestamps();
         });
     }

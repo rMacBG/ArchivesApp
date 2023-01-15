@@ -18,31 +18,13 @@
             <div class="two-col-cell">
                 <h3>Ordered List</h3>
                 <ol>
-                    <li>First in the list</li>
-                    <li>Second one goes here</li>
-                    <li>Third item on the list</li>
-                    <li>Fourth item here</li>
-                    <li>Fifth and some more to go</li>
-                    <li>Sixth, just because</li>
-                    <li>Seventh item</li>
-                    <li>Eighth and nearing the end </li>
-                    <li>Ninth and one more to go</li>
-                    <li>Tenth and last</li>
+
                 </ol>
             </div>
             <div class="two-col-cell">
                 <h3>Unordered List</h3>
                 <ul>
-                    <li>Nulla consectetur</li>
-                    <li>Integer in accumsan nisi</li>
-                    <li>Cras augue odio</li>
-                    <li>Aliquam lacinia rutrum</li>
-                    <li>Vestibulum placerat sapien</li>
-                    <li>Pellentesque eleifend</li>
-                    <li>Etiam fringilla nisl lectus</li>
-                    <li>Proin eleifend sapie</li>
-                    <li>Maecenas placerat</li>
-                    <li>Praesent ut purus fri</li>
+
                 </ul>
             </div>
         </div>

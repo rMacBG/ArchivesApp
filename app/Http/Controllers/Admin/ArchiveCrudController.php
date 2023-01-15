@@ -45,9 +45,9 @@ class ArchiveCrudController extends CrudController
 
             [
                 'label' => "Archive Text",
-                'name' => "image",
+                'name' => "file",
                 'type' => ($show ? 'view' : 'upload'),
-                'view' => 'partials/image',
+                'view' => 'partials/file',
                 'upload' => true,
             ]
         ];
@@ -113,5 +113,9 @@ class ArchiveCrudController extends CrudController
     protected function setupUpdateOperation()
     {
         $this->setupCreateOperation();
+    }
+    protected function setupShowOperation(){
+        $this->crud->set('show.setFromDb', false);
+        $this->crud->addColumns($this->getFieldsData(TRUE));
     }
 }
