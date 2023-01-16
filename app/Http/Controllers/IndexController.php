@@ -9,7 +9,7 @@ class IndexController extends Controller
    public function index() {
         return view ('index.index',[
             'title' => 'Archives Hub',
-            'text' => '<p>kek</p>',
+            'text' => 'Archivin stuff ngl',
            // 'imgURL' => 'assets/images/about/about-part.jpg',
         ]);
     }

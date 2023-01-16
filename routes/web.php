@@ -18,4 +18,5 @@ use App\Http\Controllers\ArchivesController;
 
 Route::get('/', [IndexController::class, 'index']);
 Route::get('archive', [ArchivesController::class, 'archives']);
+Route::get('currentArchive', [ArchivesController::class, 'archive_opened']);
 

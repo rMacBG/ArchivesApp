@@ -1,5 +1,5 @@
 @extends('layouts.app')
-@section('archives')
+@section('archive_template')
     <div id="content">
         <!-- Page Items -->
         <div class="pageitem">
@@ -14,11 +14,12 @@
         </div>
         <div class="pageitem">
 
-            <div class="one-col-cell">
-                <h2>Archive List</h2>
-                <ol>
-@foreach($archives as $archive)
-                        <li><a href="archive_opened">{{$archive['title']}}</a></li>
-                </ol>
-                @endforeach
+                       @isset($id)
+                    <h1>{{$archive['title']}}</h1>
+                    <p>{{$description}}</p>
+
+                @endisset
+
+        </div>
+
 @endsection

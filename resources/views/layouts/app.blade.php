@@ -36,6 +36,7 @@
 <!-- // -->
 @yield('content')
 @yield('archives')
+@yield('archive_template')
 <!-- Footer Items -->
 <div id="footer">
     <p>&copy; Copyright Your Name</p>

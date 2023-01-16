@@ -51,22 +51,23 @@ class Archive extends Model
         $this->uploadFileToDisk($value, $attribute_name, $disk, $destination_path, $fileName = null);
         $this->attributes[$attribute_name] = 'storage/' . $this->attributes[$attribute_name];
     }
-    /*
-    |--------------------------------------------------------------------------
-    | RELATIONS
-    |--------------------------------------------------------------------------
-    */
+
     public function tags()
     {
         return $this->belongsToMany(Tag::class, 'archive_tags','archive_id', 'tag_id');
     }
 
-    /*
-    |--------------------------------------------------------------------------
-    | RELATIONS
-    |--------------------------------------------------------------------------
-    */
+   public function parent(){
+        return $this->belongsTo('Archive', 'id');
 
+   }
+   public function children(){
+        return $this->hasMany('Archive', 'id');
+   }
+    public function childrenRecursive()
+    {
+        return $this->children()->with('childrenRecursive');
+    }
     /*
     |--------------------------------------------------------------------------
     | SCOPES
