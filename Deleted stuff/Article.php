@@ -33,14 +33,14 @@ class Article extends Model
     public static function boot(){
         parent::boot();
         static::deleting(function($obj){
-            Storage::delete(Str::replaceFirst('storage/', 'public/', $obj->image));
+            Storage::delete(Str::replaceFirst('storage/', 'public/', $obj->file));
         });
     }
     public function setImageAttribute($value)
     {
-        $attribute_name = "image";
+        $attribute_name = "file";
         // destination path relative to the disk above
-        $destination_path = "articles";
+        $destination_path = "archives";
 
         // if the image was erased
         if ($value==null) {

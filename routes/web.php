@@ -18,3 +18,4 @@ use App\Http\Controllers\ArchivesController;
 
 Route::get('/', [IndexController::class, 'index']);
 Route::get('archive', [ArchivesController::class, 'archives']);
+

@@ -26,6 +26,8 @@ class ArchiveRequest extends FormRequest
     {
         return [
             // 'name' => 'required|min:5|max:255'
+            'title' => 'required|min:2|max:60',
+            'description' => 'required|min:5|max:150000',
         ];
     }
 

@@ -16,18 +16,12 @@
             <h2>Ordered and Unordered Lists</h2>
             <p class="sub">Lists in two columns</p>
             <div class="two-col-cell">
-                <h3>Ordered List</h3>
+                <h3>Archive List</h3>
                 <ol>
-
+@foreach($archives as $archive)
+                        <li>{{$archive['title']}}</li>
                 </ol>
-            </div>
-            <div class="two-col-cell">
-                <h3>Unordered List</h3>
-                <ul>
-
-                </ul>
-            </div>
-        </div>
+                @endforeach
         <div class="pageitem">
             <h2>Simple Gallery</h2>
             <p class="sub">Images in three columns and unlimited rows.

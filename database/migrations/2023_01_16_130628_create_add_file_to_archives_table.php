@@ -13,7 +13,7 @@ return new class extends Migration
      */
     public function up()
     {
-        Schema::table('archives', function (Blueprint $table) {
+        Schema::create('add_file_to_archives', function (Blueprint $table) {
             $table->string('file',255)->nullable();
         });
     }
@@ -25,8 +25,6 @@ return new class extends Migration
      */
     public function down()
     {
-        Schema::table('archives', function (Blueprint $table) {
-                $table->dropColumn('file');
-        });
+        Schema::dropIfExists('add_file_to_archives');
     }
 };

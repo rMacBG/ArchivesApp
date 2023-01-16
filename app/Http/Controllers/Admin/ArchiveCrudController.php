@@ -28,8 +28,8 @@ class ArchiveCrudController extends CrudController
                 'type' => 'text'
             ],
             [
-                'name' => 'content',
-                'label' => 'Content',
+                'name' => 'description',
+                'label' => 'Description',
                 'type' => ($show ? "text" : 'summernote')
 
             ],
@@ -44,7 +44,7 @@ class ArchiveCrudController extends CrudController
             ],
 
             [
-                'label' => "Archive Text",
+                'label' => "Archive file",
                 'name' => "file",
                 'type' => ($show ? 'view' : 'upload'),
                 'view' => 'partials/file',
@@ -62,6 +62,7 @@ class ArchiveCrudController extends CrudController
         CRUD::setModel(\App\Models\Archive::class);
         CRUD::setRoute(config('backpack.base.route_prefix') . '/archive');
         CRUD::setEntityNameStrings('archive', 'archives');
+        $this->crud->addFields($this->getFieldsData());
     }
 
     /**
@@ -73,7 +74,7 @@ class ArchiveCrudController extends CrudController
     protected function setupListOperation()
     {
         CRUD::column('title');
-        CRUD::column('content');
+        CRUD::column('description');
         CRUD::column('created_at');
         CRUD::column('updated_at');
 
@@ -95,7 +96,7 @@ class ArchiveCrudController extends CrudController
         CRUD::setValidation(ArchiveRequest::class);
 
         CRUD::field('title');
-        CRUD::field('content');
+       // CRUD::field('content');
 
         /**
          * Fields can be defined using the fluent syntax or array syntax:
