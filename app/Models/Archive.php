@@ -51,7 +51,7 @@ class Archive extends Model
 
     public function tags()
     {
-        return $this->belongsToMany(Tag::class, 'archive_types','archive_id', 'tag_id');
+        return $this->belongsToMany(Genre::class, 'archive_types','archive_id', 'tag_id');
     }
 
 

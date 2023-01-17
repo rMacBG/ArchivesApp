@@ -3,5 +3,5 @@
 
  <li class="nav-item"><a class="nav-link" href="{{ backpack_url('user') }}"><i class="nav-icon la la-th-list"></i> Users</a></li>
 {{-- <li class="nav-item"><a class="nav-link" href="{{ backpack_url('article') }}"><i class="nav-icon la la-th-list"></i> Articles</a></li> --}}
-<li class="nav-item"><a class="nav-link" href="{{ backpack_url('tag') }}"><i class="nav-icon la la-th-list"></i> Tags</a></li>
+<li class="nav-item"><a class="nav-link" href="{{ backpack_url('genre') }}"><i class="nav-icon la la-th-list"></i> Genres</a></li>
 <li class="nav-item"><a class="nav-link" href="{{ backpack_url('archive') }}"><i class="nav-icon la la-th-list"></i> Archives</a></li>

@@ -15,7 +15,7 @@ class Genre extends Model
     |--------------------------------------------------------------------------
     */
 
-    protected $table = 'tags';
+    protected $table = 'genre';
     // protected $primaryKey = 'id';
     // public $timestamps = false;
     protected $guarded = ['id'];

@@ -27,7 +27,7 @@ class GenreCrudController extends CrudController
     public function setup()
     {
         CRUD::setModel(\App\Models\Genre::class);
-        CRUD::setRoute(config('backpack.base.route_prefix') . '/Genre');
+        CRUD::setRoute(config('backpack.base.route_prefix') . '/genre');
         CRUD::setEntityNameStrings('genre', 'genres');
     }
 
