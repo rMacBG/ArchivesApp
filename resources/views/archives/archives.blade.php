@@ -17,8 +17,8 @@
             <div class="one-col-cell">
                 <h2>Archive List</h2>
                 <ol>
-@foreach($archives as $archive)
-                        <li><a href="archive_opened">{{$archive['title']}}</a></li>
+                    @foreach($archives as $archive)
+                        <li>{{$archive['title']}}</li>
                 </ol>
                 @endforeach
 @endsection

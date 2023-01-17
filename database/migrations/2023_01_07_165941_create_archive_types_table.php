@@ -13,11 +13,11 @@ return new class extends Migration
      */
     public function up()
     {
-        Schema::create('archive_tags', function (Blueprint $table)
+        Schema::create('archive_genres', function (Blueprint $table)
         {
             $table->id();
             $table->integer('archive_id')->unsigned();
-            $table->integer('tag_id')->unsigned();
+            $table->integer('genre_id')->unsigned();
         });
     }
 
@@ -28,6 +28,6 @@ return new class extends Migration
      */
     public function down()
     {
-        Schema::dropIfExists('archive_tags');
+        Schema::dropIfExists('archive_genres');
     }
 };

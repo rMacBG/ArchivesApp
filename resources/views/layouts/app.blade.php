@@ -4,7 +4,7 @@
 <head>
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <title>{{$title}}</title>
+    <title>{{$title ?? ""}}</title>
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <meta name="Description" lang="en" content="open source html and css template">
     <meta name="author" content="mlp design">
@@ -12,7 +12,7 @@
     <link rel="stylesheet" href="pastel.css">
 </head>
 <body>
-<!-- Menu Items -->
+<div>
 <nav>
     <input type="checkbox" id="show-menu" role="button">
     <label for="show-menu" class="open"><span class="fa fa-bars"></span></label>
@@ -20,11 +20,12 @@
     <ul id="menu">
         <li><a class="active" href="/">Home</a></li>
         <li><a href="archive">Archives</a></li>
-        <li><a href="#">Pastel</a></li>
+        <li><a href="login">Login</a></li>
         <li><a href="#">Empty</a></li>
         <li><a href="#">Also Empty</a></li>
     </ul>
 </nav>
+</div>
 <!-- // -->
 <!-- Banner -->
 <div id="banner">
@@ -33,10 +34,13 @@
         <p class="sub">Find many archives  from different companies for educational and research purposes</p>
     </div>
 </div>
-<!-- // -->
+<div>
 @yield('content')
 @yield('archives')
-@yield('archive_template')
+@yield('login')
+@yield('register')
+@yield('verify')
+</div>
 <!-- Footer Items -->
 <div id="footer">
     <p>&copy; Copyright Your Name</p>

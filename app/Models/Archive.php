@@ -3,6 +3,7 @@
 namespace App\Models;
 
 use Backpack\CRUD\app\Models\Traits\CrudTrait;
+use Illuminate\Database\Eloquent\Factories\HasFactory;
 use Illuminate\Database\Eloquent\Model;
 use Illuminate\Support\Facades\Storage;
 use Illuminate\Support\Str;
@@ -11,17 +12,13 @@ class Archive extends Model
 {
     use CrudTrait;
 
-    /*
-    |--------------------------------------------------------------------------
-    | GLOBAL VARIABLES
-    |--------------------------------------------------------------------------
-    */
+    use HasFactory;
 
     protected $table = 'archives';
     // protected $primaryKey = 'id';
     // public $timestamps = false;
     protected $guarded = ['id'];
-    // protected $fillable = [];
+     protected $fillable = ['name', 'description', 'file'];
     // protected $hidden = [];
     // protected $dates = [];
 
@@ -54,20 +51,11 @@ class Archive extends Model
 
     public function tags()
     {
-        return $this->belongsToMany(Tag::class, 'archive_tags','archive_id', 'tag_id');
+        return $this->belongsToMany(Tag::class, 'archive_types','archive_id', 'tag_id');
     }
 
-   public function parent(){
-        return $this->belongsTo('Archive', 'id');
 
-   }
-   public function children(){
-        return $this->hasMany('Archive', 'id');
-   }
-    public function childrenRecursive()
-    {
-        return $this->children()->with('childrenRecursive');
-    }
+
     /*
     |--------------------------------------------------------------------------
     | SCOPES

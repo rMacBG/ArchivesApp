@@ -17,17 +17,14 @@ class ArchiveRequest extends FormRequest
         return backpack_auth()->check();
     }
 
-    /**
-     * Get the validation rules that apply to the request.
-     *
-     * @return array
-     */
+
     public function rules()
     {
         return [
             // 'name' => 'required|min:5|max:255'
             'title' => 'required|min:2|max:60',
-            'description' => 'required|min:5|max:150000',
+            'description' => 'required|min:5|max:450000',
+            'file' => 'required',
         ];
     }
 
@@ -43,15 +40,14 @@ class ArchiveRequest extends FormRequest
         ];
     }
 
-    /**
-     * Get the validation messages that apply to the request.
-     *
-     * @return array
-     */
+
     public function messages()
     {
-        return [
-            //
-        ];
+            $rules =
+
+            ['title.required' => 'archive name is required',
+                'description.required' => 'archive description is required'];
+            return $rules;
+
     }
 }
